@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="PMS.css">
+
+    <title>
+        product manged system
+    </title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="head">
+            <h1>cruds</h1>
+            <p>product manged system</p>
+        </div>
+        <div id="inputs">
+            <input type="text" id="title"
+             placeholder="productTitle">
+    
+            <div class="pric">
+                <input type="number" onkeyup="getTotal()"  id="price" placeholder="price">
+                <input type="number"  onkeyup="getTotal()" id="tex" placeholder="tex">
+                <input type="number" onkeyup="getTotal()"  id="ads" placeholder="ads">
+                <input type="number"  onkeyup="getTotal()" id="discount" placeholder="discount">
+                <small id="total"></small>
+            </div>
+            <input type="number" placeholder="count" id="count">
+            <input type="text" placeholder="category" id="category">
+            <button id="create">create</button>
+    
+        </div>
+    
+        <div id="outputs">
+            <div class="sreach">
+                <input type="text" onkeyup="sreachData(this.value)" placeholder="sreach" id="sreach">
+                <div class="btnsreach">
+                    <button onclick="getSreachMood(this.id)" id="sreach by title">sreach by title</button>
+                    <button onclick="getSreachMood(this.id)" id="sreach by category">sreach by category</button>
+                </div>
+            </div>
+            <div id="deleteAll"></div>
+            <table>
+                <thead>
+                    <th>id</th>
+                    <th>title</th>
+                    <th>price</th>
+                    <th>tex</th>
+                    <th>ads</th>
+                    <th>discount</th>
+                    <th>total</th>
+                    <th>category</th>
+                    <th>update</th>
+                    <th>delete</th>
+    
+                </thead>
+                <tbody id="tbody">
+                    
+                </tbody>
+                  
+               
+            </table>
+        </div>
+    </div>
+    
+    <script src="PMS.js"></script>
+</body>
+
+</html>
